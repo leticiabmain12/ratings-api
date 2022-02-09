@@ -41,16 +41,16 @@ def top_rating (brand_rating):
     return jsonify(ratings_response)
 
    
-@ratings_bp.route("/<brand_name>", methods=["GET"])
-def top_rating (brand_name):
-    ratings = Rating.query.filter_by(brand_name=brand_name)
-    print(ratings)
-    ratings_response =[]
-    for rating in ratings:
-        ratings_response.append(
-            {"name": rating.brand_name,
-            "rating": rating.brand_rating})
-    return jsonify(ratings_response)
+# @ratings_bp.route("/<brand_name>", methods=["GET"])
+# def top_rating (brand_name):
+#     ratings = Rating.query.filter_by(brand_name=brand_name)
+#     print(ratings)
+#     ratings_response =[]
+#     for rating in ratings:
+#         ratings_response.append(
+#             {"name": rating.brand_name,
+#             "rating": rating.brand_rating})
+#     return jsonify(ratings_response)
 
 
 
