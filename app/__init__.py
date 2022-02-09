@@ -9,7 +9,7 @@ def create_app(test_config=None):
     app = Flask(__name__)
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
   
-    app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://postgres:postgres@localhost:5432/brand_ratings"
+    app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://postgres:postgres@https://fast-mountain-02468.herokuapp.com"
 
     db.init_app(app)
     migrate.init_app(app,db)
