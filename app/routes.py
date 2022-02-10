@@ -24,7 +24,9 @@ def get_ratings():
     for rating in ratings:
         ratings_response.append(
             {"name": rating.brand_name,
-            "rating": rating.brand_rating})
+            "rating": rating.brand_rating,
+            "summary": rating.brand_summary
+            })
     return jsonify(ratings_response)
 
 
@@ -37,7 +39,9 @@ def top_rating (brand_rating):
     for rating in ratings:
         ratings_response.append(
             {"name": rating.brand_name,
-            "rating": rating.brand_rating})
+            "rating": rating.brand_rating,
+            "summary": rating.brand_summary}
+            )
     return jsonify(ratings_response)
 
    
